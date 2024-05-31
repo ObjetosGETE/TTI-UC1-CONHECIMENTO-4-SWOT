@@ -1,0 +1,105 @@
+.conteudo {
+	width: 1920px;
+	height: 1080px;
+	position: fixed;
+	left: calc(50% - 1920px / 2);
+	top: calc(50% - 1080px / 2);
+	margin: auto;
+	background-color: #0191bd;
+	border-radius: 20px;
+	padding: 2%;
+	font-size: 2em;
+	align-items: center;
+}
+
+.intro{
+	background-color: white;
+	border-radius: 10px;
+	margin: 1%;
+}
+
+.intro-corpo {
+	color: #024d64;
+	padding: 1%;
+}
+
+.drag-obj {
+	padding: 5px;
+	text-align: center;
+	cursor: move;
+	border-radius: 10px;
+	margin: 1%;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.drag-obj:hover {
+	background-color: #0191bd;
+	color: white;
+	box-shadow: 1px 2px 3px rgb(14, 13, 13);
+}
+
+.opcoes {
+	margin: 1%;
+	background-color: #dbf1fd;
+	border-radius: 20px;
+}
+
+.item {
+	width: 306px;
+	height: 69px;
+
+	border-radius: 10px;
+	background-color: #ff9200;
+	color: white;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	border: 2px dashed rgb(255, 255, 255);
+	margin-inline: 3%;
+}
+
+.item p {
+	text-align: center;
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+
+}
+
+.p-frase {
+	border-top: 3px dotted white;
+	padding: 2%;
+	margin: 1%;
+	color: white;
+}
+
+.item.acertou {
+	border: #008086;
+	background-color: #008086;
+	border-color: #008086;
+}
+
+.item.errou {
+	border: #e93535;
+	background-color: #860000;
+}
+
+.modal-correto {
+	background-color: #0191bd;
+    color:white;
+	font-weight: bold;
+
+}
+
+.modal-errado {
+	background-color:#860000;
+    color:white;
+	font-weight: bold;
+	
+}
+
+#obj1 {
+	top: 102px;
+	left: 767px;
+}
