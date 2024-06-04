@@ -8,11 +8,11 @@
 	background-color: #0191bd;
 	border-radius: 20px;
 	padding: 2%;
-	font-size: 2em;
+	font-size: 30px;
 	align-items: center;
 }
 
-.intro{
+.intro {
 	background-color: white;
 	border-radius: 10px;
 	margin: 1%;
@@ -20,7 +20,7 @@
 
 .intro-corpo {
 	color: #024d64;
-	padding: 1%;
+	padding: 3%;
 }
 
 .drag-obj {
@@ -31,6 +31,7 @@
 	margin: 1%;
 	font-weight: bold;
 	text-transform: uppercase;
+	border: 2px dashed #008086;
 }
 
 .drag-obj:hover {
@@ -46,9 +47,8 @@
 }
 
 .item {
-	width: 306px;
-	height: 69px;
-
+	width: 561px;
+	height: 89px;
 	border-radius: 10px;
 	background-color: #ff9200;
 	color: white;
@@ -64,14 +64,24 @@
 	width: 100%;
 	padding: 0px;
 	margin: 0px;
-
 }
 
 .p-frase {
-	border-top: 3px dotted white;
-	padding: 2%;
 	margin: 1%;
-	color: white;
+	font-size: 36px;
+	line-height: 2.8em;
+	font-weight: bold;
+}
+
+.questoes {
+	margin-top: 100px;
+}
+
+.coluna-resposta {
+	margin-top: 68px;
+	background-color: white;
+	color: #0191bd;
+	border-radius: 20px;
 }
 
 .item.acertou {
@@ -87,19 +97,103 @@
 
 .modal-correto {
 	background-color: #0191bd;
-    color:white;
+	color: white;
 	font-weight: bold;
-
 }
 
 .modal-errado {
-	background-color:#860000;
-    color:white;
+	background-color: #860000;
+	color: white;
 	font-weight: bold;
-	
+}
+
+.modal-xl {
+	font-size: 30px !important;
+}
+
+.modal-title {
+	font-size: 30px !important;
+}
+
+.btn-proximo {
+	width: 467px;
+	height: 103px;
+	margin-top: 1%;
+	font-size: 49px;
+	background-color: white;
+	color: #0191bd;
+	border-radius: 20px;
+	border: none;
+}
+
+.btn-proximo:hover {
+	background-color: #005772;
+	color: white;
+}
+
+.col-final {
+	color: #0191bd;
+	font-size: 33px;
+	margin: 20px;
+	background-color: white;
+	border-radius: 20px;
+	padding: 1%;
 }
 
 #obj1 {
-	top: 102px;
-	left: 767px;
+	top: 687px;
+	left: 660px;
+}
+
+#obj2 {
+	top: 684px;
+	left: 489px;
+}
+
+#obj3 {
+	top: 680px;
+	left: 617px;
+}
+
+#obj4 {
+	top: 609px;
+	left: 904px;
+}
+
+#obj5 {
+	top: 684px;
+	left: 423px;
+}
+
+/**********************************************************************/
+/***************************** vire o celular *************************/
+/**********************************************************************/
+
+.p-paisagem {
+	color: white;
+	text-align: center;
+}
+
+.img-paisagem {
+	max-width: 70% !important;
+	height: auto;
+	display: block;
+}
+
+@media only screen and (orientation: portrait) {
+	.modo-smart {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		margin: auto;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: #0191bd;
+		z-index: 9999999999999999999;
+	}
 }

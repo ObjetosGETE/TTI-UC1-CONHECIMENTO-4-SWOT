@@ -24,10 +24,7 @@ document.addEventListener('drop', function (event) {
     if (!dropTarget.innerHTML) {
       dropTarget.appendChild(draggedElement);
     } else {
-
-      const existingElement = dropTarget.firstElementChild;
       dropTarget.appendChild(draggedElement);
-      dropTarget.parentNode.appendChild(existingElement);
     }
   }
 });
@@ -52,7 +49,7 @@ $(document).ready(function () {
     '2': "Parabéns, você acertou! As forças são as aptidões mais fortes de determinado contexto.",
     '3': "Resposta correta! A fraquezas podem indicar melhorias nas ações que se pretendem planejar.",
     '4': "Muito bem! O mercado imobiliário relaciona-se diretamente com questões políticas e econômicas do País.",
-    '5': "Parabéns! Oportunidades são elementos externos que impactam positivamente do planejamento das ações." 
+    '5': "Parabéns! Oportunidades são elementos externos que impactam positivamente do planejamento das ações."
   };
 
   $(".espaco-obj").on("drop", function (event) {
@@ -63,70 +60,100 @@ $(document).ready(function () {
     var feedbackModalNegativo = $("#feedback-modal-negativo");
 
     if (partePais === espacoPais) {
-        $(this).removeClass('bg-danger');
-        $(this).addClass('bg-success');
-        $("#audio-acerto")[0].play();
-        fornecerFeedback(true, feedbacks[espacoPais]);
+      $(this).removeClass('bg-danger');
+      $(this).addClass('bg-success');
+      $("#audio-acerto")[0].play();
+      fornecerFeedback(true, feedbacks[espacoPais]);
     } else {
-        $(this).addClass('bg-danger');
-        $(".drag-obj").removeClass('dragging');
-        $("#audio-errado")[0].play();
-        feedbackModalNegativo.modal("show");
+      $(this).addClass('bg-danger');
+      $(".drag-obj").removeClass('dragging');
+      $("#audio-errado")[0].play();
+      feedbackModalNegativo.modal("show");
     }
-});
-
-function fornecerFeedback(acertou, motivo) {
-    if (acertou) {
-        var feedbackModalPositivo = $("#feedback-modal-positivo");
-        var feedbackTexto = feedbackModalPositivo.find(".modal-body");
-        feedbackTexto.text("Parabéns! " + motivo);
-        feedbackModalPositivo.modal("show");
-    }
-}
-
-
-function escalaProporcao(largura, altura) {
-  var larguraScreen = $(window).width();
-  var alturaScreen = $(window).height();
-  var proporcaoAltura = (alturaScreen * 100) / altura;
-  var proporcaoLargura = (larguraScreen * 100) / largura;
-  var proporcao, larguraAltura, larguraAlturaAuto;
-
-  if (proporcaoAltura < proporcaoLargura) {
-    larguraAltura = "height";
-    larguraAlturaAuto = "width";
-    proporcao = proporcaoAltura / 100;
-  } else {
-    larguraAltura = "width";
-    larguraAlturaAuto = "height";
-    proporcao = proporcaoLargura / 100;
-  }
-
-  console.log(proporcao, proporcaoAltura, proporcaoLargura)
-  return [proporcao, larguraAltura, larguraAlturaAuto];
-}
-
-resizeBodyConteudo();
-
-function resizeBodyConteudo() {
-  var proporcao1920 = escalaProporcao(1920, 1080)[0];
-
-  $(".conteudo").css({
-    "transform": "scale(" + proporcao1920 + ")",
-    "transform-origin": "center center"
   });
 
-  var proporcao900;
-
-  if ($(window).width() < 992) {
-    proporcao900 = escalaProporcao(900, 576)[0];
-  } else {
-    proporcao900 = 1;
+  function fornecerFeedback(acertou, motivo) {
+    if (acertou) {
+      var feedbackModalPositivo = $("#feedback-modal-positivo");
+      var feedbackTexto = feedbackModalPositivo.find(".modal-body");
+      feedbackTexto.text("Parabéns! " + motivo);
+      feedbackModalPositivo.modal("show");
+    }
   }
-}
 
-$(window).resize(function () {
-  resizeBodyConteudo()
-})
+  btnProximo();
+
+  function btnProximo() {
+    $('#btnProxima2').click(function () {
+      $('.primeira-parte').addClass('d-none');
+      $('.segunda-parte').removeClass('d-none');
+    });
+
+    $('#btnProxima3').click(function () {
+      $('.segunda-parte').addClass('d-none');
+      $('.terceira-parte').removeClass('d-none');
+    });
+
+    $('#btnProxima4').click(function () {
+      $('.terceira-parte').addClass('d-none');
+      $('.quarta-parte').removeClass('d-none');
+    });
+
+    $('#btnProxima5').click(function () {
+      $('.quarta-parte').addClass('d-none');
+      $('.quinta-parte').removeClass('d-none');
+    });
+
+    $('#btnProxima6').click(function () {
+      $('.quinta-parte').addClass('d-none');
+      $('.final').removeClass('d-none');
+    });
+
+  }
+
+
+  function escalaProporcao(largura, altura) {
+    var larguraScreen = $(window).width();
+    var alturaScreen = $(window).height();
+    var proporcaoAltura = (alturaScreen * 100) / altura;
+    var proporcaoLargura = (larguraScreen * 100) / largura;
+    var proporcao, larguraAltura, larguraAlturaAuto;
+
+    if (proporcaoAltura < proporcaoLargura) {
+      larguraAltura = "height";
+      larguraAlturaAuto = "width";
+      proporcao = proporcaoAltura / 100;
+    } else {
+      larguraAltura = "width";
+      larguraAlturaAuto = "height";
+      proporcao = proporcaoLargura / 100;
+    }
+
+    console.log(proporcao, proporcaoAltura, proporcaoLargura)
+    return [proporcao, larguraAltura, larguraAlturaAuto];
+  }
+
+  resizeBodyConteudo();
+
+  function resizeBodyConteudo() {
+    var proporcao1920 = escalaProporcao(1920, 1080)[0];
+
+    $(".conteudo").css({
+      "transform": "scale(" + proporcao1920 + ")",
+      "transform-origin": "center center"
+    });
+
+    var proporcao900;
+
+    if ($(window).width() < 992) {
+      proporcao900 = escalaProporcao(900, 576)[0];
+    } else {
+      proporcao900 = 1;
+    }
+  }
+
+  $(window).resize(function () {
+    resizeBodyConteudo()
+  })
 
 });
