@@ -12,6 +12,58 @@
 	align-items: center;
 }
 
+@media only screen and (max-width: 768px) {
+
+	.conteudo {
+		font-size: 34px !important;
+	}
+
+	.intro-corpo {
+		font-size: 40px !important;
+	}
+
+	.p-frase {
+		font-size: 40px !important;
+	}
+
+	.item {
+		width: 620px !important;
+	}
+
+	#obj1 {
+		top: 702px !important;
+		left: 835px !important;
+	}
+
+	#obj2 {
+		top: 706px !important;
+		left: 536px !important;
+	}
+
+	#obj3 {
+		top: 705px !important;
+		left: 583px !important;
+	}
+
+	#obj4 {
+		top: 615px !important;
+		left: 995px !important;
+	}
+
+	#obj5 {
+		top: 725px !important;
+		left: 477px !important;
+	}
+
+	.modal-xl {
+		font-size: 20px !important;
+	}
+
+	.col-final {
+		font-size: 40px !important;
+	}
+}
+
 .intro {
 	background-color: white;
 	border-radius: 10px;
@@ -21,6 +73,8 @@
 .intro-corpo {
 	color: #024d64;
 	padding: 3%;
+	text-transform: uppercase;
+	font-size: 25px;
 }
 
 .drag-obj {
@@ -74,7 +128,7 @@
 }
 
 .questoes {
-	margin-top: 100px;
+	margin-top: 80px;
 }
 
 .coluna-resposta {
@@ -108,11 +162,11 @@
 }
 
 .modal-xl {
-	font-size: 30px !important;
+	font-size: 25px !important;
 }
 
 .modal-title {
-	font-size: 30px !important;
+	font-size: 25px !important;
 }
 
 .btn-proximo {
@@ -141,27 +195,27 @@
 }
 
 #obj1 {
-	top: 687px;
+	top: 596px;
 	left: 660px;
 }
 
 #obj2 {
-	top: 684px;
+	top: 596px;
 	left: 489px;
 }
 
 #obj3 {
-	top: 680px;
+	top: 596px;
 	left: 617px;
 }
 
 #obj4 {
-	top: 609px;
+	top: 507px;
 	left: 904px;
 }
 
 #obj5 {
-	top: 684px;
+	top: 596px;
 	left: 423px;
 }
 

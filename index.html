@@ -13,10 +13,10 @@
 <body>
   <div class="conteudo">
     <div class="text-center row intro">
-      <p class="intro-corpo col-9">A Matriz SWOT é uma ferramenta estratégica que identifica forças, fraquezas,
+      <p class="intro-corpo">A Matriz SWOT é uma ferramenta estratégica que identifica forças, fraquezas,
         oportunidades e ameaças de uma empresa. <strong>Clique e arraste as palavras para completar as frases e
           exercitar seu conhecimento sobre a Matriz SWOT.</strong></p>
-      <img class="col-3" src="assets/img/arraste.gif" alt="">
+
     </div>
 
     <div class="questoes text-center">
@@ -24,10 +24,10 @@
       <div class="primeira-parte partes">
         <div class="coluna-pais">
           <div class="opcoes row">
-            <div data-resp="1 " class="drag-obj col drag-obj-1" draggable="true">estratégias</div>
             <div class="drag-obj col drag-obj-2" draggable="true">forças</div>
             <div class="drag-obj col drag-obj-3" draggable="true">fraquezas</div>
             <div class="drag-obj col drag-obj-4" draggable="true">ameaças</div>
+            <div data-resp="1 " class="drag-obj col drag-obj-1" draggable="true">estratégias</div>
             <div class="drag-obj col drag-obj-5" draggable="true">oportunidades</div>
           </div>
         </div>
@@ -46,11 +46,13 @@
       <div class="segunda-parte partes d-none">
         <div class="coluna-pais">
           <div class="opcoes row">
-            <div class="drag-obj col drag-obj-1" draggable="true">estratégias</div>
-            <div data-resp="2 " class="drag-obj col drag-obj-2" draggable="true">forças</div>
-            <div class="drag-obj col drag-obj-3" draggable="true">fraquezas</div>
-            <div class="drag-obj col drag-obj-4" draggable="true">ameaças</div>
             <div class="drag-obj col drag-obj-5" draggable="true">oportunidades</div>
+            <div class="drag-obj col drag-obj-1" draggable="true">estratégias</div>
+
+            <div class="drag-obj col drag-obj-3" draggable="true">fraquezas</div>
+            <div data-resp="2 " class="drag-obj col drag-obj-2" draggable="true">forças</div>
+            <div class="drag-obj col drag-obj-4" draggable="true">ameaças</div>
+
           </div>
         </div>
         <div class="coluna-resposta text-center">
@@ -67,11 +69,12 @@
       <div class="terceira-parte partes d-none">
         <div class="coluna-pais">
           <div class="opcoes row">
+            <div data-resp="3 " class="drag-obj col drag-obj-3" draggable="true">fraquezas</div>
             <div class="drag-obj col drag-obj-1" draggable="true">estratégias</div>
             <div class="drag-obj col drag-obj-2" draggable="true">forças</div>
-            <div data-resp="3 " class="drag-obj col drag-obj-3" draggable="true">fraquezas</div>
-            <div class="drag-obj col drag-obj-4" draggable="true">ameaças</div>
             <div class="drag-obj col drag-obj-5" draggable="true">oportunidades</div>
+            <div class="drag-obj col drag-obj-4" draggable="true">ameaças</div>
+
           </div>
         </div>
         <div class="coluna-resposta text-center">
@@ -87,11 +90,13 @@
       <div class="quarta-parte partes d-none">
         <div class="coluna-pais">
           <div class="opcoes row">
-            <div class="drag-obj col drag-obj-1" draggable="true">estratégias</div>
             <div class="drag-obj col drag-obj-2" draggable="true">forças</div>
+            <div class="drag-obj col drag-obj-1" draggable="true">estratégias</div>
+
             <div class="drag-obj col drag-obj-3" draggable="true">fraquezas</div>
-            <div data-resp="4 " class="drag-obj col drag-obj-4" draggable="true">ameaças</div>
+
             <div class="drag-obj col drag-obj-5" draggable="true">oportunidades</div>
+            <div data-resp="4 " class="drag-obj col drag-obj-4" draggable="true">ameaças</div>
           </div>
         </div>
         <div class="coluna-resposta text-center">
@@ -109,10 +114,12 @@
         <div class="coluna-pais">
           <div class="opcoes row">
             <div class="drag-obj col drag-obj-1" draggable="true">estratégias</div>
-            <div class="drag-obj col drag-obj-2" draggable="true">forças</div>
+
+            <div data-resp="5 " class="drag-obj col drag-obj-5" draggable="true">oportunidades</div>
             <div class="drag-obj col drag-obj-3" draggable="true">fraquezas</div>
             <div class="drag-obj col drag-obj-4" draggable="true">ameaças</div>
-            <div data-resp="5 " class="drag-obj col drag-obj-5" draggable="true">oportunidades</div>
+            <div class="drag-obj col drag-obj-2" draggable="true">forças</div>
+
           </div>
         </div>
         <div class="coluna-resposta text-center">
@@ -157,6 +164,7 @@
             </p>
           </div>
         </div>
+        <button type="button" class="btn btn-primary btn-lg btn-proximo" id="btnReiniciar">Reiniciar</button>
       </div>
 
     </div>

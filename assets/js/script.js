@@ -34,6 +34,7 @@ $(document).ready(function () {
   $(".drag-obj").on("dragstart", function (event) {
     $(this).addClass('dragging');
     event.originalEvent.dataTransfer.setData("text/plain", $(this).data('resp') + '-' + $(this).text());
+
   });
 
   $(".drag-obj").on("dragend", function (event) {
@@ -106,10 +107,15 @@ $(document).ready(function () {
 
     $('#btnProxima6').click(function () {
       $('.quinta-parte').addClass('d-none');
+      $('.intro').addClass('d-none');
       $('.final').removeClass('d-none');
+    });
+    $('#btnReiniciar').click(function () {
+      location.reload();
     });
 
   }
+
 
 
   function escalaProporcao(largura, altura) {
